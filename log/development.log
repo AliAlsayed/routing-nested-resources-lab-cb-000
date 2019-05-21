@@ -705,3 +705,13 @@ Completed 200 OK in 233ms (Views: 225.6ms | ActiveRecord: 0.8ms)
 
 
 Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 92.98.236.131 at 2019-05-21 16:42:09 +0000
+Started GET "/artists/1" for 92.98.236.131 at 2019-05-21 16:42:13 +0000
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 1]]
+  Rendered artists/show.html.erb within layouts/application (37.4ms)
+Completed 200 OK in 45ms (Views: 40.4ms | ActiveRecord: 1.1ms)
+
+
